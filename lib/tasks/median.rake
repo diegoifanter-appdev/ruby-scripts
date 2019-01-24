@@ -21,4 +21,18 @@ task :median do
   #    - find the number to the left of the middle number
   #    - find the number to the right of the middle number
   #    - average the left and right numbers and save it as your median
+  numbers=numbers.sort
+  median=0
+  
+  if numbers.length.odd?
+  ap numbers.length/2
+  median=numbers[numbers.length/2]
+  else
+  median=(numbers[numbers.length/2-1]+numbers[numbers.length/2])/2.to_f
+  end
+  
+  ap "Sorted numbers:"
+  ap numbers
+  ap "Median: "+median.to_s
+  
 end

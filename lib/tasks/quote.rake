@@ -55,4 +55,8 @@ task :quote do
   # Your code goes below.
   # =====================================================================
 
+n= rand(quotations.length)
+ap(quotations[n][:quote]+" --"+quotations[n][:citation])
+
+
 end

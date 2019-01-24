@@ -4,13 +4,16 @@ task :mode do
   input = open(path_to_file).read.chomp
   numbers = input.gsub(",", "").split.map(&:to_f)
 
-  # =====================================================================
-  # Your code goes below.
-  # The numbers from the file are in the array `numbers`.
-  # =====================================================================
-
-  # MODE
-  # ====
-
-  # To find the mode of a set of numbers, I follow an approach similar to the one for minimum and maximum above.
+  numbers=numbers.sort
+  mode= numbers[0]
+  
+  numbers.each do |number|
+    if numbers.count(number) > numbers.count(mode)
+    mode=number 
+    end
+  end
+  
+  ap "Sorted numbers:"
+  ap numbers
+  ap "Mode: "+mode.to_s
 end

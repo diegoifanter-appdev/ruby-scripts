@@ -11,5 +11,10 @@ task :fortune do
   # =====================================================================
   # Your code goes below.
   # =====================================================================
+n=rand(fortunes.length)
+ap(fortunes[n])
+
+#optional method
+#ap(fortunes.sample())
 
 end
